@@ -1,7 +1,15 @@
 
+import { useState } from 'react';
 import { Button } from 'react-bootstrap';
 
 const Input = ({placeholder='fill the form',variant='danger'}) => {
+    const[activities,newActivities]=useState('');
+    const [data,setdata]=useState('');
+    
+    
+    const addActivity=()=>{
+        
+    }
 
   return (
 
