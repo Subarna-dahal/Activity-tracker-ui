@@ -7,7 +7,7 @@ function App() {
     <>
     <div className="container vh-100">
       
-      <div  className='d-flex justify-content-center' style={{minHeight:"400px"}}>
+      <div  className='d-flex justify-content-center' style={{minHeight:"425px"}}>
         <Home/>
       </div>
     <Footer/>
