@@ -1,27 +1,29 @@
+import { Button } from "react-bootstrap";
 
-import { useState } from 'react';
-import { Button } from 'react-bootstrap';
-
-const Input = ({placeholder='fill the form',variant='danger'}) => {
-    const[activities,newActivities]=useState('');
-    const [data,setdata]=useState('');
-    
-    
-    const addActivity=()=>{
-        
-    }
-
+const Input = ({
+  placeholder = "Add placeholder",
+  variant = "danger",
+  value,
+  onChange,
+  onSubmit,
+}) => {
   return (
-
-    <div className='d-flex justify-content-centre'>
-        <div className='w-75'>
-        <input  className="form-control" placeholder={placeholder}/>
-        </div>
-        <div>
-        <Button variant={variant}>Submit</Button>
-        </div>
+    <div className="d-flex justify-content-center">
+      <div className="w-75">
+        <input
+          className="form-control"
+          placeholder={placeholder}
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+        />
+      </div>
+      <div>
+        <Button variant={variant} onClick={onSubmit}>
+          Submit
+        </Button>
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default Input;
